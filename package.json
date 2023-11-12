@@ -1,5 +1,5 @@
 {
-  "name": "homepage",
+  "name": "Ido's Homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,5 +45,5 @@
   "devDependencies": {
     "gh-pages": "^6.0.0"
   },
-  "homepage": "https://hermaphroditos.github.io/homepage"
+  "homepage": "https://hermaphroditos.github.io"
 }
