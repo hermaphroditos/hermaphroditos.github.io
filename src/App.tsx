@@ -6,15 +6,32 @@ import Heading from './components/Heading';
 import { Section } from './components/Section';
 import Counter from './components/Counter';
 import List from './components/List';
+import useMediaQuery from './hooks/useMediaQuery';
+import Navbar from './components/Navbar';
+
+const queryProps = {
+  query: "(min-width: 1060px)"
+}
 
 function App() {
+  
+  // page selection
+  const [selectedPage, setSelectedPage] = useState('home');
+  const isAboveMediumScreens = useMediaQuery(queryProps);
+  const pageProps = {
+    page: 'home',
+    selectedPage: selectedPage,
+    setSelectedPage: setSelectedPage
+  };
+
   const [count, setCount] = useState<number>(1)
 
   return (
-    <div className="App">
+    <div className="App bg-deep-blue">
       <Container className="my-4">
         <header className="App-header">
-          <Heading title="hello"/>
+          <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} /> {/* 수정 */}
+          <Heading title="Hello !"/>
           <Counter setCount={setCount} >{count}</Counter>
         </header>
         <div>
