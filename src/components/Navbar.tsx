@@ -2,23 +2,24 @@ import {useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
-type SelectedPageProps = {
-  selectedPage: string;
-  setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
-};
+// type SelectedPageProps = {
+//   selectedPage: string;
+//   setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
+// };
 
-type PageProps = {
-  page: string;
-  selectedPage: string;
-  setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
-};
+// type PageProps = {
+//   page: string;
+//   selectedPage: string;
+//   setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
+// };
 
-const Link = ({ page, selectedPage, setSelectedPage }: PageProps) => {
+const Link = ({ page, selectedPage, setSelectedPage }: PageState) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
-        hover:text-yellow transition duration-500`}
+      className={`${
+        selectedPage === lowerCasePage ? "text-yellow" : ""
+      } hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -32,7 +33,7 @@ const queryProps = {
 }
 
 
-const Navbar = ({ selectedPage, setSelectedPage }: SelectedPageProps): any => {
+const Navbar = ({ selectedPage, setSelectedPage }: SelectedPageState): any => {
   const [isMenuToggled, setIsMenuToggled ] =useState(false) ;
   const isAboveMediumScreens = useMediaQuery(queryProps);
 
@@ -44,22 +45,16 @@ const Navbar = ({ selectedPage, setSelectedPage }: SelectedPageProps): any => {
         {/* DESKTOP NAV */}
         {isAboveMediumScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
-            <Link page="Who Am I?" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <div>
-              <button className="rounded-e-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              more...  
-              </button>
-            </div>
-            <Link page="What I Did" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <div>
-              <button className="rounded-e-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              more...  
-              </button>
-            </div>
-            <Link page="Other Websites" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page="Testmonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
           </div>
         ) : (
-          <div></div>
+         <button className="rounded-e-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+         more...  
+         </button>
         )}
       </div>
     </nav>
