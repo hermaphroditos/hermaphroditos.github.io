@@ -13,7 +13,6 @@ body,
   @apply text-white;
 }
 
-.app-header {
+.bg-footer {
   background-color: #282c34;
-  color: white;
 }

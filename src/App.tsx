@@ -54,10 +54,10 @@ function App() {
         <Landing selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </div>
       <div className="w-5/6 mx-auto md:h-full">
-        <List items={["coffee","tacos","code"]} render={(item:string) => <span>{item}</span>} />
+        {/* <List items={["coffee","tacos","code"]} render={(item:string) => <span>{item}</span>} /> */}
       </div>
       <footer>
-        <Heading title="Hello !"/>
+        {/* <Heading title="Hello !"/> */}
         <Counter setCount={setCount} >{count}</Counter>
       </footer>
     </div>

@@ -15,6 +15,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const Link = ({ page, selectedPage, setSelectedPage }: PageState) => {
   const lowerCasePage = page.toLowerCase();
+
   return (
     <AnchorLink
       className={`${
@@ -33,12 +34,13 @@ const queryProps = {
 }
 
 
-const Navbar = ({ selectedPage, setSelectedPage }: SelectedPageState): any => {
+const Navbar = ({ isTopOfPage=true, selectedPage, setSelectedPage }: SelectedPageState): any => {
   const [isMenuToggled, setIsMenuToggled ] =useState(false) ;
   const isAboveMediumScreens = useMediaQuery(queryProps);
+  const navbarBackground =  isTopOfPage ? 'bg-black' : "bg-red";
 
   return (
-    <nav className={`z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-playfair text-3xl font-bold">J.ID</h4>
 
