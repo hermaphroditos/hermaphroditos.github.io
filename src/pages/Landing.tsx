@@ -63,14 +63,16 @@ const Landing = ({ setSelectedPage }: SelectedPageState) => {
 
         {/* CALL TO ACTIONS */}
         <div>
-          <AnchorLink
-              className="bg-gradient-rainblue text-deep-blue text-center rounded-sm py-3 px-7 font-semibold
-                hover:bg-blue hover:text-white transition duration-500"
-              onClick={() => setSelectedPage("contact")}
-              href="#contact"
-            >
-              Contact Me
-          </AnchorLink>
+          <div className="xs:text-center md:text-left">
+            <AnchorLink
+                className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+                  hover:bg-blue hover:text-white transition duration-500"
+                onClick={() => setSelectedPage("contact")}
+                href="#contact"
+              >
+                Contact Me
+            </AnchorLink>
+          </div>
           <SocialMediaIcons />
           {/* <AnchorLink
               className="rounded-r-sm py-0.5 pr-0.5"
