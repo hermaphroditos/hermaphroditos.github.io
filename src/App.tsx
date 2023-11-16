@@ -10,6 +10,9 @@ import useMediaQuery from './hooks/useMediaQuery';
 import Navbar from './components/Navbar';
 import DotGroup from './components/DotGroup';
 import Landing from './pages/Landing';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 const queryProps = {
   query: "(min-width: 1060px)"
@@ -55,6 +58,13 @@ function App() {
       </div>
       <div className="w-5/6 mx-auto md:h-full">
         {/* <List items={["coffee","tacos","code"]} render={(item:string) => <span>{item}</span>} /> */}
+        <Skills />
+      </div>
+      <div className="w-5/6 mx-auto md:h-full">
+        <Projects />
+      </div>
+      <div className="w-5/6 mx-auto md:h-full">
+        <Contact />
       </div>
       <footer>
         {/* <Heading title="Hello !"/> */}
