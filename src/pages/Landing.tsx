@@ -50,9 +50,13 @@ const Landing = ({ setSelectedPage }: SelectedPageState) => {
             </span>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+          <p className="mt-10 text-sm text-center md:text-start italic text-black">
+            JAVA Spring Boot Expert, REST API Constructor, MicroService Architect,
+            Gamification Designer, Visualisation Challenger. 
+          </p>
+          <p className="mt-4 mb-7 text-sm text-center md:text-start">
+            Java Spring Boot, Vue3, Nuxt.js, Typescript, GraphQL, PostgreSQL,...
+            My stacks matches your team? Please contact me! 
           </p>
 
         </div>
