@@ -66,25 +66,31 @@ const Projects = () => {
       {/* PROJECTS */}
       <div className="flex justify-center">
         <div
-          className="sm:grid sm:grid-cols-3"
+          className="sm:grid sm:grid-cols-2"
         >
           <div
             className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            BEAUTIFUL USER INTERFACES
-          </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
-
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[400px] max-h-[200px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
+          </div>
+          <div
+            className="flex justify-center text-center items-center p-10 bg-rose-600
+              max-w-[400px] max-h-[200px] text-2xl font-playfair font-semibold"
+          >
+            FAST & COMFORTABLE 
+          </div>
+          <div
+            className="flex justify-center text-center items-center p-10 bg-rose-600
+              max-w-[400px] max-h-[200px] text-2xl font-playfair font-semibold"
+          >
+            FAST & COMFORTABLE 
+          </div>
+          <div
+            className="flex justify-center text-center items-center p-10 bg-rose-600
+              max-w-[400px] max-h-[200px] text-2xl font-playfair font-semibold"
+          >
+            FAST & COMFORTABLE 
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="flex justify-end w-full" >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+            <span className="text-yellow">CONTACT ME</span>
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -48,7 +48,7 @@ const Contact = () => {
             method="POST"
           >
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-red font-semibold placeholder-opaque-black p-3"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -64,7 +64,7 @@ const Contact = () => {
             )}
 
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-red font-semibold placeholder-opaque-black p-3 mt-5"
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -80,7 +80,7 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-red font-semibold placeholder-opaque-black p-3 mt-5"
               placeholder="MESSAGE"
               {...register("message", {
                 required: true,

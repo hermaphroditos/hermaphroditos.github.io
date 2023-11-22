@@ -54,7 +54,7 @@ const Landing = ({ setSelectedPage }: SelectedPageState) => {
             JAVA Spring Boot Expert, REST API Constructor, MicroService Architect,
             Gamification Designer, Visualisation Challenger. 
           </p>
-          <p className="mt-4 mb-7 text-sm text-center md:text-start">
+          <p className="mt-4 mb-7 text-sm text-center font-mono text-yellow md:text-start">
             Java Spring Boot, Vue3, Nuxt.js, Typescript, GraphQL, PostgreSQL,...
             My stacks matches your team? Please contact me! 
           </p>
@@ -63,7 +63,7 @@ const Landing = ({ setSelectedPage }: SelectedPageState) => {
 
         {/* CALL TO ACTIONS */}
         <div>
-          <div className="xs:text-center md:text-left">
+          <div className="text-center md:text-left">
             <AnchorLink
                 className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
                   hover:bg-blue hover:text-white transition duration-500"
@@ -74,15 +74,6 @@ const Landing = ({ setSelectedPage }: SelectedPageState) => {
             </AnchorLink>
           </div>
           <SocialMediaIcons />
-          {/* <AnchorLink
-              className="rounded-r-sm py-0.5 pr-0.5"
-              onClick={() => setSelectedPage("contact")}
-              href="#contact"
-            >
-              <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-                Let's talk.
-              </div>
-          </AnchorLink> */}
         </div>
       </div>
     </section>
